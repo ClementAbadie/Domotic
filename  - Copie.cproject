@@ -19,7 +19,7 @@
 						<value name="C:\Program Files\Common Files\Intel\WirelessCommon\"/>
 						<value name="C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86"/>
 						<value name="C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64"/>
-						<value name="D:\MinGW\bin"/>
+						<value name="C:\MinGW\bin"/>
 						<value name="C:\Windows\system32\config\systemprofile\.dnx\bin"/>
 						<value name="C:\Program Files\Microsoft DNX\Dnvm\"/>
 						<value name="C:\Program Files\Microsoft SQL Server\120\Tools\Binn\"/>
@@ -28,8 +28,8 @@
 						<value name="C:\Program Files (x86)\Skype\Phone\"/>
 						<value name="D:\SysGCC\Raspberry\bin"/>
 						<value name="D:\Program Files\Qt\5.6\msvc2015_64\bin"/>
-						<value name="D:\MinGW\bin"/>
-						<value name="D:\MinGW\msys\1.0\bin"/>
+						<value name="C:\MinGW\bin"/>
+						<value name="C:\MinGW\msys\1.0\bin"/>
 					</stringListMacro>
 				</macros>
 				<externalSettings/>
@@ -112,8 +112,8 @@
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.release.1719424397" moduleId="org.eclipse.cdt.core.settings" name="Release">
 				<macros>
 					<stringListMacro name="PATH" type="VALUE_TEXT_LIST">
-						<value name="D:\SysGCC\Raspberry\arm-linux-gnueabihf\bin"/>
-						<value name="D:\SysGCC\Raspberry\mingw-make"/>
+						<value name="C:\SysGCC\Raspberry\arm-linux-gnueabihf\bin"/>
+						<value name="C:\SysGCC\Raspberry\mingw-make"/>
 						<value name="C:\ProgramData\Oracle\Java\javapath"/>
 						<value name="%COSMOSM%"/>
 						<value name="C:\Compilation\sdk\tools"/>
@@ -126,17 +126,17 @@
 						<value name="C:\Program Files\Common Files\Intel\WirelessCommon\"/>
 						<value name="C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86"/>
 						<value name="C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64"/>
-						<value name="D:\MinGW\bin"/>
+						<value name="C:\MinGW\bin"/>
 						<value name="C:\Windows\system32\config\systemprofile\.dnx\bin"/>
 						<value name="C:\Program Files\Microsoft DNX\Dnvm\"/>
 						<value name="C:\Program Files\Microsoft SQL Server\120\Tools\Binn\"/>
 						<value name="C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86"/>
 						<value name="C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64"/>
 						<value name="C:\Program Files (x86)\Skype\Phone\"/>
-						<value name="D:\SysGCC\Raspberry\bin"/>
+						<value name="C:\SysGCC\Raspberry\bin"/>
 						<value name="D:\Program Files\Qt\5.6\msvc2015_64\bin"/>
-						<value name="D:\MinGW\bin"/>
-						<value name="D:\MinGW\msys\1.0\bin"/>
+						<value name="C:\MinGW\bin"/>
+						<value name="C:\MinGW\msys\1.0\bin"/>
 					</stringListMacro>
 				</macros>
 				<externalSettings/>
@@ -154,7 +154,7 @@
 					<folderInfo id="cdt.managedbuild.config.gnu.cross.exe.release.1719424397." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.cross.exe.release.269806316" name="Cross GCC" superClass="cdt.managedbuild.toolchain.gnu.cross.exe.release">
 							<option id="cdt.managedbuild.option.gnu.cross.prefix.1332356148" name="Prefix" superClass="cdt.managedbuild.option.gnu.cross.prefix" value="arm-linux-gnueabihf-" valueType="string"/>
-							<option id="cdt.managedbuild.option.gnu.cross.path.1175514726" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" value="D:\SysGCC\Raspberry\bin;D:\SysGCC\Raspberry\mingw-make" valueType="string"/>
+							<option id="cdt.managedbuild.option.gnu.cross.path.1175514726" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" value="C:\SysGCC\Raspberry\bin;C:\SysGCC\Raspberry\mingw-make" valueType="string"/>
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.1314338748" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
 							<builder buildPath="${workspace_loc:/Domotic}/Release" id="cdt.managedbuild.builder.gnu.cross.1430548465" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
 							<tool id="cdt.managedbuild.tool.gnu.cross.c.compiler.255018864" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
