@@ -17,7 +17,7 @@ CPP_DEPS += \
 src/sensors/bmp180/%.o: ../src/sensors/bmp180/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: Cross G++ Compiler'
-	arm-linux-gnueabihf-g++ -I"D:\SysGCC\Raspberry\wiringPi\include" -I"D:\SysGCC\Raspberry\include" -I"D:\libraries\include" -I"D:\libraries\curl-master\include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	arm-linux-gnueabihf-g++ -I"D:\Dev\Tools\SysGCC\Raspberry\wiringPi\include" -I"D:\Dev\Tools\SysGCC\Raspberry\include" -I"D:\Dev\Tools\libraries\include" -I"D:\Dev\Tools\libraries\curl-master\include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

@@ -5,8 +5,8 @@
 			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="cdt.managedbuild.config.gnu.cross.exe.debug.401656900" moduleId="org.eclipse.cdt.core.settings" name="Debug">
 				<macros>
 					<stringListMacro name="PATH" type="VALUE_TEXT_LIST">
-						<value name="D:\Dev\Tools\SysGCC\Raspberry\arm-linux-gnueabihf\bin"/>
-						<value name="D:\Dev\Tools\SysGCC\Raspberry\mingw-make"/>
+						<value name="D:\SysGCC\Raspberry\arm-linux-gnueabihf\bin"/>
+						<value name="D:\SysGCC\Raspberry\mingw-make"/>
 						<value name="C:\ProgramData\Oracle\Java\javapath"/>
 						<value name="%COSMOSM%"/>
 						<value name="C:\Compilation\sdk\tools"/>
@@ -19,17 +19,17 @@
 						<value name="C:\Program Files\Common Files\Intel\WirelessCommon\"/>
 						<value name="C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86"/>
 						<value name="C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64"/>
-						<value name="D:\Dev\Tools\MinGW\bin"/>
+						<value name="D:\MinGW\bin"/>
 						<value name="C:\Windows\system32\config\systemprofile\.dnx\bin"/>
 						<value name="C:\Program Files\Microsoft DNX\Dnvm\"/>
 						<value name="C:\Program Files\Microsoft SQL Server\120\Tools\Binn\"/>
 						<value name="C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86"/>
 						<value name="C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64"/>
 						<value name="C:\Program Files (x86)\Skype\Phone\"/>
-						<value name="D:\Dev\Tools\SysGCC\Raspberry\bin"/>
+						<value name="D:\SysGCC\Raspberry\bin"/>
 						<value name="D:\Program Files\Qt\5.6\msvc2015_64\bin"/>
-						<value name="D:\Dev\Tools\MinGW\bin"/>
-						<value name="D:\Dev\Tools\MinGW\msys\1.0\bin"/>
+						<value name="D:\MinGW\bin"/>
+						<value name="D:\MinGW\msys\1.0\bin"/>
 					</stringListMacro>
 				</macros>
 				<externalSettings/>
@@ -47,17 +47,17 @@
 					<folderInfo id="cdt.managedbuild.config.gnu.cross.exe.debug.401656900." name="/" resourcePath="">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.cross.exe.debug.1187227796" name="Cross GCC" superClass="cdt.managedbuild.toolchain.gnu.cross.exe.debug">
 							<option id="cdt.managedbuild.option.gnu.cross.prefix.1736871355" name="Prefix" superClass="cdt.managedbuild.option.gnu.cross.prefix" useByScannerDiscovery="false" value="arm-linux-gnueabihf-" valueType="string"/>
-							<option id="cdt.managedbuild.option.gnu.cross.path.2101189630" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" useByScannerDiscovery="false" value="D:\Dev\Tools\SysGCC\Raspberry\bin" valueType="string"/>
+							<option id="cdt.managedbuild.option.gnu.cross.path.2101189630" name="Path" superClass="cdt.managedbuild.option.gnu.cross.path" useByScannerDiscovery="false" value="D:\SysGCC\Raspberry\bin" valueType="string"/>
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross.543926985" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
 							<builder buildPath="${workspace_loc:/Domotic}/Debug" id="cdt.managedbuild.builder.gnu.cross.1884339652" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Gnu Make Builder" superClass="cdt.managedbuild.builder.gnu.cross"/>
 							<tool id="cdt.managedbuild.tool.gnu.cross.c.compiler.626950101" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler">
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.option.optimization.level.158156892" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.debugging.level.761189994" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.423542606" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;D:\Dev\Tools\SysGCC\Raspberry\include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Dev\Tools\libraries\curl-master\include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Dev\Tools\libraries\include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Dev\Tools\SysGCC\Raspberry\wiringPi\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\SysGCC\Raspberry\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Compilation\Eclipse\libraries\curl-master\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\Compilation\Eclipse\libraries\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\SysGCC\Raspberry\wiringPi\include&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.include.files.1815045135" name="Include files (-include)" superClass="gnu.c.compiler.option.include.files" useByScannerDiscovery="false"/>
 								<option id="gnu.c.compiler.option.dialect.std.1630391481" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
@@ -67,10 +67,10 @@
 								<option id="gnu.cpp.compiler.option.optimization.level.1111160902" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.debugging.level.1384390667" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.12156500" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;D:\Dev\Tools\SysGCC\Raspberry\wiringPi\include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Dev\Tools\SysGCC\Raspberry\include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Dev\Tools\libraries\include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Dev\Tools\libraries\curl-master\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\SysGCC\Raspberry\wiringPi\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\SysGCC\Raspberry\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\libraries\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\libraries\curl-master\include&quot;"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.dialect.std.1692065989" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.114713619" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
@@ -78,11 +78,11 @@
 							<tool id="cdt.managedbuild.tool.gnu.cross.c.linker.2056178411" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker"/>
 							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.linker.1232278230" name="Cross G++ Linker" superClass="cdt.managedbuild.tool.gnu.cross.cpp.linker">
 								<option id="gnu.cpp.link.option.paths.526008137" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" useByScannerDiscovery="false" valueType="libPaths">
-									<listOptionValue builtIn="false" value="&quot;D:\Dev\Tools\SysGCC\Raspberry\lib&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Dev\Tools\libraries\lib&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Dev\Tools\libraries\curl-master\lib\.libs&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Dev\Tools\libraries\lib\arm-linux-gnueabihf&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Dev\Tools\SysGCC\Raspberry\wiringPi\lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\SysGCC\Raspberry\lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\libraries\lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\libraries\curl-master\lib\.libs&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\libraries\lib\arm-linux-gnueabihf&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;D:\SysGCC\Raspberry\wiringPi\lib&quot;"/>
 								</option>
 								<option id="gnu.cpp.link.option.libs.116485845" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" useByScannerDiscovery="false" valueType="libs">
 									<listOptionValue builtIn="false" value="wiringPi"/>
