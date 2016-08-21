@@ -17,7 +17,7 @@ CPP_DEPS += \
 src/sensors/htu21/%.o: ../src/sensors/htu21/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: Cross G++ Compiler'
-	arm-linux-gnueabihf-g++ -I"D:\Dev\Tools\SysGCC\Raspberry\wiringPi\include" -I"D:\Dev\Tools\SysGCC\Raspberry\include" -I"D:\Dev\Tools\libraries\include" -I"D:\Dev\Tools\libraries\curl-master\include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
+	arm-linux-gnueabihf-g++ -I"D:\Dev\Tools\SysGCC\include" -I"D:\Dev\Tools\libraries\wiringPi\include" -I"D:\Dev\Tools\libraries\curl-master\include" -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
