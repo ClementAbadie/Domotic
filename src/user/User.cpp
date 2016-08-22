@@ -7,11 +7,11 @@
 
 #include "User.h"
 
-
+DB User::myDB = DB();
 
 User::User(volatile DBs  *myDBs) {
 	//Auto-generated constructor stub
-	this->myDB = DB(myDBs);
+	User::myDB = DB(myDBs);
 
 }
 
@@ -19,7 +19,11 @@ User::~User() {
 	// TODO Auto-generated destructor stub
 }
 
+int User::setDB(volatile DBs  *myDBs){
 
+	User::myDB = DB(myDBs);
+	return 0;
+}
 
 
 string User::execute(string order) {
@@ -39,7 +43,7 @@ string User::execute(string order) {
 		if(state==0||state==1){
 			ChaconPlug(1,nb,state);
 		}
-		myDB.setMode(chaconToVal[nb][room_salon],state,room_salon);
+		User::myDB.setMode(chaconToVal[nb][room_salon],state,room_salon);
 	}
 
 
@@ -52,9 +56,9 @@ string User::atConnect() {
 
 	ostringstream ss;
 
-	ss << "Humidité : " << myDB.get(val_humidity,room_salon) << endl;
-	ss << "Température : " << myDB.get(val_temperature,room_salon) << endl;
-	ss << "Pression : " << myDB.get(val_pressure,room_salon) << endl;
+	ss << "Humidité : " << User::myDB.get(val_humidity,room_salon) << endl;
+	ss << "Température : " << User::myDB.get(val_temperature,room_salon) << endl;
+	ss << "Pression : " << User::myDB.get(val_pressure,room_salon) << endl;
 
 	return ss.str();
 
@@ -64,7 +68,7 @@ string User::atConnect1() {
 
 	ostringstream ss;
 
-	ss << "Temperature : " << myDB.get(val_temperature,room_salon) <<  " C\n";
+	ss << "Temperature : " << User::myDB.get(val_temperature,room_salon) <<  " C\n";
 
 	return ss.str();
 
@@ -73,7 +77,7 @@ string User::atConnect2() {
 
 	ostringstream ss;
 
-	ss << "Pression : " << myDB.get(val_pressure,room_salon) << " mBar\n";
+	ss << "Pression : " << User::myDB.get(val_pressure,room_salon) << " mBar\n";
 
 	return ss.str();
 
@@ -83,7 +87,7 @@ string User::atConnect3() {
 
 	ostringstream ss;
 
-	ss << "Humidite : " << myDB.get(val_humidity,room_salon) << " %\n";
+	ss << "Humidite : " << User::myDB.get(val_humidity,room_salon) << " %\n";
 
 	return ss.str();
 

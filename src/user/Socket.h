@@ -41,6 +41,9 @@ class Socket
 
   bool is_valid() const { return m_sock != -1; }
 
+  int getSock();
+  void setSock (int sock);
+
  private:
 
   int m_sock;

@@ -8,14 +8,15 @@
 
 
 #include"Domotic.h"
-#include <iostream>
 
 
-using namespace std;
 
 
-pthread_mutex_t* myMutex = ( pthread_mutex_t*) malloc(sizeof( pthread_mutex_t));
-volatile struct DBs* myDBs = (volatile struct DBs*) malloc(sizeof(volatile struct DBs));
+//dataStruct DS;
+	pthread_mutex_t* myMutex = ( pthread_mutex_t*) malloc(sizeof( pthread_mutex_t));
+	volatile struct DBs* myDBs = (volatile struct DBs*) malloc(sizeof(volatile struct DBs));
+
+
 
 
 void *AIfunc(void *id)
@@ -28,8 +29,19 @@ return 0;
 
 void *USERfunc(void *id)
 {
-	ServerSocket myServer = ServerSocket();
-	myServer.start(56250,myMutex,myDBs);
+//	ServerSocket myServer = ServerSocket();
+//	myServer.start(56250,myMutex,myDBs);
+
+//	  Server *s;
+//	  s = new Server(56250);
+
+	  //Main loop
+//	  s->AcceptAndDispatch();
+
+
+//	myTCPServer(56250,myMutex,myDBs);
+	TidyServer(56250);
+
 
 return 0;
 }
@@ -56,6 +68,7 @@ int multithread()
 int main() {
 
 
+	User::setDB(myDBs);
 	multithread();
 
 	//DB myDB = DB();
@@ -74,4 +87,6 @@ int main() {
 
 	return 0;
 }
+
+
 

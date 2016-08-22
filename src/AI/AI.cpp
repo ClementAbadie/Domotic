@@ -84,16 +84,25 @@ int AI::refreshAllValues(){
 
 int AI::refreshAllRealTimeValues(){
 
-	this->myDB.set(val_humidity,htu_getHumidity(),room_salon);
-	this->myDB.set(val_temperature,(htu_getTemperature()+bmp_getTemperature())/2+calibration_linear_temperature,room_salon);
-	this->myDB.set(val_pressure,bmp_getPressure(),room_salon);
+
+	float hum = htu_getHumidity();
+	float tmp =	(htu_getTemperature()+bmp_getTemperature())/2+calibration_linear_temperature;
+	float pre = bmp_getPressure();
+
+
+	this->myDB.set(val_humidity,hum,room_salon);
+	this->myDB.set(val_temperature,tmp,room_salon);
+	this->myDB.set(val_pressure,pre,room_salon);
 
 	return 0;
 }
 
 int AI::humidityCheck(int room) {
 
+
 	float hum = this->myDB.get(val_humidity,room);
+
+
 
 	if(myDB.getMode(val_humidity,room)==mode_auto)
 	{

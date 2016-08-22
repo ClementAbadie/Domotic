@@ -60,6 +60,8 @@ void ServerSocket::accept ( ServerSocket& sock )
     }
 }
 
+
+
 int ServerSocket::start (int port, pthread_mutex_t *myMutex, volatile DBs  *myDBs)
 {
 
@@ -118,5 +120,13 @@ int ServerSocket::start (int port, pthread_mutex_t *myMutex, volatile DBs  *myDB
 }
 
 
+int ServerSocket::getSock ()
+{
+	return this->m_sock;
+}
 
+void ServerSocket::setSock (int sock)
+{
+	this->m_sock = sock;
+}
 

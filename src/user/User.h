@@ -26,15 +26,17 @@ public:
 	User(){};
 	virtual ~User();
 
-	string execute(string order);
-	string atConnect();
+	static int setDB(volatile DBs  *myDBs);
 
-	string atConnect1();
-	string atConnect2();
-	string atConnect3();
+	static string execute(string order);
+	static string atConnect();
+
+	static string atConnect1();
+	static string atConnect2();
+	static string atConnect3();
 
 private:
-	DB myDB;
+	static DB myDB;
 };
 
 

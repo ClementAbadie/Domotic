@@ -20,6 +20,8 @@ Socket::Socket() :
 
 }
 
+
+
 Socket::~Socket()
 {
   if ( is_valid() )
@@ -189,4 +191,16 @@ void Socket::set_non_blocking ( const bool b )
   fcntl ( m_sock,
 	  F_SETFL,opts );
 
+}
+
+
+int Socket::getSock()
+{
+
+	return this->m_sock;
+}
+
+void Socket::setSock (int sock)
+{
+	this->m_sock = sock;
 }
