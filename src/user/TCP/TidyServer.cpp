@@ -93,7 +93,6 @@ void* SocketHandler(void* lp){
 
     while(true)
     {
-
     	memset(buffer, 0, buffer_len);
     	bytecount = recv(*csock, buffer, buffer_len, 0);
     	if(bytecount== -1){
@@ -104,9 +103,7 @@ void* SocketHandler(void* lp){
         goto FINISH;
     }
 
-    //printf("Received bytes %d\nReceived string \"%s\"\n", bytecount, buffer);
     	cout << "RCV : " << buffer << endl;
-    //strcat(buffer, " SERVER ECHO");
 
     	User::execute(buffer);
    /*
@@ -116,9 +113,6 @@ void* SocketHandler(void* lp){
     }
     */
     }
-
-    //printf("Sent bytes %d\n", bytecount);
-
 
 FINISH:
 	cout << "Client Disconnected !" << endl;

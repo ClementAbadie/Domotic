@@ -30,6 +30,7 @@
 						<value name="D:\Dev\Tools\MinGW\bin"/>
 						<value name="D:\Dev\Tools\MinGW\msys\1.0\bin"/>
 					</stringListMacro>
+					<stringMacro name="DEV_PATH" type="VALUE_TEXT" value="D:\Dev\Tools\"/>
 				</macros>
 				<externalSettings/>
 				<extensions>
@@ -53,9 +54,9 @@
 								<option defaultValue="gnu.c.optimization.level.none" id="gnu.c.compiler.option.optimization.level.524129499" name="Optimization Level" superClass="gnu.c.compiler.option.optimization.level" useByScannerDiscovery="false" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.debugging.level.957698603" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.1175732343" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;D:\Dev\Tools\SysGCC\include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Dev\Tools\libraries\wiringPi\include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Dev\Tools\libraries\curl-master\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${DEV_PATH}SysGCC\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${DEV_PATH}libraries\wiringPi\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${DEV_PATH}libraries\curl-master\include&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.dialect.std.1297665733" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.671958548" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
@@ -64,9 +65,9 @@
 								<option id="gnu.cpp.compiler.option.optimization.level.1455712371" name="Optimization Level" superClass="gnu.cpp.compiler.option.optimization.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.optimization.level.none" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.debugging.level.698722204" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.2086042777" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;D:\Dev\Tools\SysGCC\include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Dev\Tools\libraries\wiringPi\include&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Dev\Tools\libraries\curl-master\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${DEV_PATH}SysGCC\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${DEV_PATH}libraries\wiringPi\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${DEV_PATH}libraries\curl-master\include&quot;"/>
 								</option>
 								<option id="gnu.cpp.compiler.option.dialect.std.291670661" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1913539195" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
@@ -74,10 +75,10 @@
 							<tool id="cdt.managedbuild.tool.gnu.cross.c.linker.325454766" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker"/>
 							<tool command="g++" commandLinePattern="${COMMAND} ${FLAGS} ${OUTPUT_FLAG} ${OUTPUT_PREFIX}${OUTPUT} ${INPUTS}" errorParsers="org.eclipse.cdt.core.GLDErrorParser" id="cdt.managedbuild.tool.gnu.cross.cpp.linker.1776705687" name="Cross G++ Linker" superClass="cdt.managedbuild.tool.gnu.cross.cpp.linker">
 								<option id="gnu.cpp.link.option.paths.605963407" name="Library search path (-L)" superClass="gnu.cpp.link.option.paths" useByScannerDiscovery="false" valueType="libPaths">
-									<listOptionValue builtIn="false" value="&quot;D:\Dev\Tools\SysGCC\lib&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Dev\Tools\libraries\wiringPi\lib&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Dev\Tools\libraries\curl-master\lib&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;D:\Dev\Tools\libraries\curl-master\lib\.libs&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${DEV_PATH}SysGCC\lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${DEV_PATH}libraries\wiringPi\lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${DEV_PATH}libraries\curl-master\lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${DEV_PATH}libraries\curl-master\lib\.libs&quot;"/>
 								</option>
 								<option id="gnu.cpp.link.option.libs.730725128" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" useByScannerDiscovery="false" valueType="libs">
 									<listOptionValue builtIn="false" value="wiringPi"/>
