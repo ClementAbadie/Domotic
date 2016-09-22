@@ -4,5 +4,5 @@
 
 USER_OBJS :=
 
-LIBS := -lwiringPi -lcurl -lpthread
+LIBS := -lwiringPi -lmysqlclient -lcurl -lpthread
 

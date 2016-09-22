@@ -15,6 +15,10 @@
 #include <iomanip>
 #include <math.h>
 #include <iostream>
+#include <stdio.h>
+#include <SQLAPI.h>
+
+#include <MYSQL/mysql.h>
 
 using namespace std;
 
@@ -115,7 +119,7 @@ private:
 	//float config[MAX_CONFIG_VALUE][MAX_ROOM];
 	DBs volatile *myDBs;
 	//list<string> unit;
-
+	int Connect();
 
 };
 

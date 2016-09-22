@@ -1,5 +1,13 @@
 src/AI/AI.o: ../src/AI/AI.cpp ../src/AI/AI.h ../src/AI/../Domotic.h \
  ../src/AI/../AI/DB.h ../src/AI/../AI/DBvar.h ../src/AI/../AI/DBstruct.h \
+ D:\Dev\CPP\libraries\SQLAPI\include/SQLAPI.h \
+ D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/mysql.h \
+ D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/mysql_version.h \
+ D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/mysql_com.h \
+ D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/mysql_time.h \
+ D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/my_list.h \
+ D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/typelib.h \
+ D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/my_alloc.h \
  ../src/AI/../AI/AI.h ../src/AI/../user/pushbullet.hpp \
  ../src/AI/../Test.h ../src/AI/../user/ServerSocket.h \
  ../src/AI/../user/Socket.h ../src/AI/../user/ServerSocket.h \
@@ -48,6 +56,22 @@ src/AI/AI.o: ../src/AI/AI.cpp ../src/AI/AI.h ../src/AI/../Domotic.h \
 ../src/AI/../AI/DBvar.h:
 
 ../src/AI/../AI/DBstruct.h:
+
+D:\Dev\CPP\libraries\SQLAPI\include/SQLAPI.h:
+
+D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/mysql.h:
+
+D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/mysql_version.h:
+
+D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/mysql_com.h:
+
+D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/mysql_time.h:
+
+D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/my_list.h:
+
+D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/typelib.h:
+
+D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/my_alloc.h:
 
 ../src/AI/../AI/AI.h:
 

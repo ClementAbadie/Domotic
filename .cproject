@@ -57,8 +57,10 @@
 								<option id="gnu.c.compiler.option.debugging.level.957698603" name="Debug Level" superClass="gnu.c.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.c.compiler.option.include.paths.1175732343" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${TOOLS_PATH}SysGCC\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${LIB_PATH}mysql\include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${LIB_PATH}wiringPi\include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${LIB_PATH}curl-master\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${LIB_PATH}SQLAPI\include&quot;"/>
 								</option>
 								<option id="gnu.c.compiler.option.dialect.std.1297665733" name="Language standard" superClass="gnu.c.compiler.option.dialect.std" useByScannerDiscovery="true" value="gnu.c.compiler.dialect.default" valueType="enumerated"/>
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.671958548" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
@@ -68,6 +70,8 @@
 								<option id="gnu.cpp.compiler.option.debugging.level.698722204" name="Debug Level" superClass="gnu.cpp.compiler.option.debugging.level" useByScannerDiscovery="false" value="gnu.cpp.compiler.debugging.level.max" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.2086042777" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${TOOLS_PATH}SysGCC\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${LIB_PATH}mysql\include&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${LIB_PATH}SQLAPI\include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${LIB_PATH}wiringPi\include&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${LIB_PATH}curl-master\include&quot;"/>
 								</option>
@@ -81,9 +85,12 @@
 									<listOptionValue builtIn="false" value="&quot;${LIB_PATH}wiringPi\lib&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${LIB_PATH}curl-master\lib&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${LIB_PATH}curl-master\lib\.libs&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${LIB_PATH}SQLAPI\lib&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${LIB_PATH}mysql\lib&quot;"/>
 								</option>
 								<option id="gnu.cpp.link.option.libs.730725128" name="Libraries (-l)" superClass="gnu.cpp.link.option.libs" useByScannerDiscovery="false" valueType="libs">
 									<listOptionValue builtIn="false" value="wiringPi"/>
+									<listOptionValue builtIn="false" value="mysqlclient"/>
 									<listOptionValue builtIn="false" value="curl"/>
 									<listOptionValue builtIn="false" value="pthread"/>
 								</option>

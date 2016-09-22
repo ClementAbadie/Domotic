@@ -16,6 +16,8 @@ DB::DB(volatile DBs  *myDBs) {
 
 	this->myDBs = myDBs;
 
+	this->Connect();
+
 }
 
 DB::DB() {
@@ -86,3 +88,27 @@ string DB::getUnit(int DataType){
 
 	return 	*myDBs->unit[DataType];
 }
+
+
+
+
+
+int DB::Connect()
+{
+    MYSQL mysql;
+    mysql_init(&mysql);
+    mysql_options(&mysql,MYSQL_READ_DEFAULT_GROUP,"option");
+
+    if(mysql_real_connect(&mysql,"localhost","domotic","domotic","domotic",0,NULL,0))
+    {
+    	printf("DB : Connected !");
+        mysql_close(&mysql);
+    }
+    else
+    {
+        printf("Une erreur s'est produite lors de la connexion à la BDD!");
+    }
+
+    return 0;
+}
+
