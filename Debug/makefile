@@ -51,7 +51,7 @@ all: Domotic
 Domotic: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cross G++ Linker'
-	arm-linux-gnueabihf-g++ -L"D:\Dev\Tools\SysGCC\lib" -L"D:\Dev\Tools\libraries\wiringPi\lib" -L"D:\Dev\Tools\libraries\curl-master\lib" -L"D:\Dev\Tools\libraries\curl-master\lib\.libs" -o "Domotic" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-linux-gnueabihf-g++ -L"D:\Dev\Tools\SysGCC\lib" -L"D:\Dev\CPP\libraries\wiringPi\lib" -L"D:\Dev\CPP\libraries\curl-master\lib" -L"D:\Dev\CPP\libraries\curl-master\lib\.libs" -o "Domotic" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

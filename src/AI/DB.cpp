@@ -8,6 +8,8 @@
 
 #include "DB.h"
 
+//MySQL
+
 DB::DB(volatile DBs  *myDBs) {
 	// TODO Auto-generated constructor stub
 

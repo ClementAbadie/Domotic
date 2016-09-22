@@ -1,10 +1,16 @@
 eclipse.preferences.version=1
 environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.2080262687/DEV_PATH/delimiter=;
 environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.2080262687/DEV_PATH/operation=replace
-environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.2080262687/DEV_PATH/value=D\:\\Dev\\Tools\\
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.2080262687/DEV_PATH/value=D\:\\Dev\\
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.2080262687/LIB_PATH/delimiter=;
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.2080262687/LIB_PATH/operation=replace
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.2080262687/LIB_PATH/value=D\:\\Dev\\CPP\\libraries\\
 environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.2080262687/PATH/delimiter=;
 environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.2080262687/PATH/operation=replace
 environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.2080262687/PATH/value=D\:\\Dev\\Tools\\SysGCC\\bin;C\:\\ProgramData\\Oracle\\Java\\javapath;%COSMOSM%;C\:\\Program Files\\Microsoft HPC Pack 2008 R2\\Bin\\;C\:\\Windows\\system32;C\:\\Windows;C\:\\Windows\\System32\\Wbem;C\:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C\:\\Program Files\\Intel\\WiFi\\bin\\;C\:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C\:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C\:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C\:\\MinGW\\bin;%USERPROFILE%\\.dnx\\bin;C\:\\Program Files\\Microsoft DNX\\Dnvm\\;C\:\\Program Files\\Microsoft SQL Server\\120\\Tools\\Binn\\;C\:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x86;C\:\\Program Files (x86)\\Intel\\OpenCL SDK\\2.0\\bin\\x64;C\:\\Program Files (x86)\\Skype\\Phone\\;D\:\\Dev\\Tools\\SysGCC\\bin;C\:\\Program Files\\Microsoft OLE DB Provider for DB2\\system;D\:\\Dev\\Tools\\SysGCC\\bin;D\:\\Program Files\\Qt\\5.6\\msvc2015_64\\bin;D\:\\Dev\\Tools\\MinGW\\bin;D\:\\Dev\\Tools\\MinGW\\msys\\1.0\\bin
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.2080262687/TOOLS_PATH/delimiter=;
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.2080262687/TOOLS_PATH/operation=replace
+environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.2080262687/TOOLS_PATH/value=D\:\\Dev\\Tools\\
 environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.2080262687/append=true
 environment/project/cdt.managedbuild.config.gnu.cross.exe.debug.2080262687/appendContributed=true
 environment/project/cdt.managedbuild.config.gnu.cross.exe.release.338793729/DEV_PATH/delimiter=;

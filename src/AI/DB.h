@@ -18,6 +18,79 @@
 
 using namespace std;
 
+
+
+/* acronyms TCP / DB
+ *
+ *
+ *
+ * TMP : temperature
+ * PSR : pressure
+ * HUM : humidity
+ *
+ * ACT : actuator
+ * SNS : sensor
+ *
+ *
+ *
+ * DB
+ *
+ * Datas descriptors table :
+ * DTN : data type number  (NUMERIC)
+ * UNT : unit (text)
+ * LBL : label (text)
+ * MIN : minimal value that the data can be  (NUMERIC)
+ * MAX : maximal value that the data can be  (NUMERIC)
+ *
+ * Rooms table :
+ * ROOn : room number (AutoNumber)
+ * LBL : label (TEXT)
+ *
+ * Sensors table :
+ * SNSn : sensor number (AutoNumber)
+ * DTTn : type of value that the sensor measure (NUMERIC)
+ * ROOn : location of the sensor (NUMERIC)
+ * LBL : label (text)
+ *
+ * Actuators table :
+ * ACTn : actuator number (AutoNumber)
+ * DTTn : type of value that the actuator can change (NUMERIC)
+ * ROOn : location of the sensor (NUMERIC)
+ * LBL : label (text)
+ * ACT : Action
+ * MOD : Mode (0 man 1 auto)
+ * STA : State (0 off 1 on)
+ *
+ * Measures table :
+ * DTTn : data type number  (NUMERIC)
+ * ROOn : room number (NUMERIC)
+ * VAL : value (NUMERIC)
+ * TIM : time (ttime)
+ * DAT : date (tdate)
+ *
+ *
+ * TCP
+ *
+ * DEV : Device type ( 1 sensor / 2 actuator / 3 asserv)
+ * SET : 0 off, 1 on, 2 auto
+ * VAL : value of target for auto mode
+ * RNG : range for auto mode
+ * x : value to communicate
+ *
+ * TCP trame :
+ * DEV x
+ *
+ * DEV 1, DTTn x, ROOn x, VAL x.x
+ *
+ * DEV 2, ACTn x, SET x
+ * DEV 2, ACTn x, VAL x
+ * DEV 2, ACTn x, VAL x, RNG x
+ */
+
+
+
+
+
 class DB {
 public:
 	DB();
