@@ -7,7 +7,7 @@
 //============================================================================
 
 
-#include"Domotic.h"
+#include "Domotic.h"
 
 
 
@@ -40,7 +40,8 @@ void *USERfunc(void *id)
 
 
 //	myTCPServer(56250,myMutex,myDBs);
-	TidyServer(56250);
+	//See conf/conf.h
+	TidyServer(TCP_PORT);
 
 
 return 0;
@@ -67,11 +68,20 @@ int multithread()
 
 int main() {
 
-
+if(TEST)
+{
+	Test myTest = Test();
+}
+else
+{
 	User::setDB(myDBs);
 	multithread();
+}
 
+	//****************************************************
 	//DB myDB = DB();
+
+	//myDB.Connect();
 
 	//AI myAI = AI(myDB);
 	//myAI.start();
@@ -83,7 +93,7 @@ int main() {
 
 	//myPush.push_note("Domotic"," Oh yeah ! =D");
 
-	//Test myTest = Test();
+
 
 	return 0;
 }

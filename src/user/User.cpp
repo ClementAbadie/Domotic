@@ -68,7 +68,7 @@ string User::atConnect1() {
 
 	ostringstream ss;
 
-	ss << "Temperature : " << User::myDB.get(val_temperature,room_salon) <<  User::myDB.getUnit(val_temperature) << endl;
+	ss << "Temperature : " << User::myDB.get(val_temperature,room_salon)  <<  " " <<  User::myDB.getUnit(val_temperature) << endl;
 
 	return ss.str();
 
@@ -77,7 +77,7 @@ string User::atConnect2() {
 
 	ostringstream ss;
 
-	ss << "Pression : " << User::myDB.get(val_pressure,room_salon) << User::myDB.getUnit(val_pressure);
+	ss << "Pression : " << User::myDB.get(val_pressure,room_salon)  << " " <<  User::myDB.getUnit(val_pressure) << endl;
 
 	return ss.str();
 
@@ -87,7 +87,7 @@ string User::atConnect3() {
 
 	ostringstream ss;
 
-	ss << "Humidite : " << User::myDB.get(val_humidity,room_salon) <<  User::myDB.getUnit(val_humidity) << endl;
+	ss << "Humidite : " << User::myDB.get(val_humidity,room_salon)  << " " <<  User::myDB.getUnit(val_humidity) << endl;
 
 	return ss.str();
 

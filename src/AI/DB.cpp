@@ -15,8 +15,8 @@ DB::DB(volatile DBs  *myDBs) {
 
 
 	this->myDBs = myDBs;
-
 	this->Connect();
+
 
 }
 
@@ -26,6 +26,8 @@ DB::DB() {
 
 DB::~DB() {
 	// TODO Auto-generated destructor stub
+
+	//this->Close();
 }
 
 
@@ -34,7 +36,12 @@ int DB::set(int DataType, float value, int room){
 	//TODO
 	//set time
 
-	this->set(DataType, value, room, 0);
+	if(!TEST){myDBs->realTime[DataType][room] = floor(value * 10 + 0.1) / 10;}
+
+	char query[512];
+	sprintf(query,"INSERT INTO measures VALUES ('%d', '%d', '%.1f', '%s');",DataType,room,value,dateAndTimeToString().c_str());
+	if(DEBUG){cout << query << endl;}
+    return mysql_query(&mysql,query);
 
 	return 0;
 }
@@ -53,13 +60,7 @@ int DB::setMode(int DataType, int mode, int room){
 	return 0;
 }
 
-int DB::set(int DataType, float value, int room, int time){
 
-	//TODO
-	//set time
-	myDBs->realTime[DataType][room] = floor(value * 10 + 0.1) / 10;
-	return 0;
-}
 
 int DB::setUnit(int DataType, string unit){
 	//TODO
@@ -70,7 +71,51 @@ int DB::setUnit(int DataType, string unit){
 
 float DB::get(int DataType, int room){
 
-	return myDBs->realTime[DataType][room];
+
+	   //Requête qui sélectionne tout dans ma table
+		char query[512];
+		sprintf(query,"SELECT * FROM measures WHERE dttn = %d AND roon = %d ORDER BY dat DESC LIMIT 1;",DataType,room);
+		if(DEBUG){cout << query << endl;}
+	    mysql_query(&mysql,query);
+
+	    //Déclaration des objets
+
+
+	    unsigned int i = 0;
+	    unsigned int num_champs = 0;
+
+	    //On met le jeu de résultat dans le pointeur result
+	    result = mysql_use_result(&mysql);
+	    if(result)
+	    {
+	    //On récupère le nombre de champs
+	    num_champs = mysql_num_fields(result);
+
+
+		row = mysql_fetch_row(result);
+
+		std::string svalue(row[2]);
+		float fvalue=::atof(svalue.c_str());
+
+		//Libération du jeu de résultat
+		mysql_free_result(result);
+		return fvalue;
+	    }
+	    else
+	    {
+	    	mysql_free_result(result);
+	    	printf("Table not found\n");
+	    	return -1;
+	    }
+
+	    //Libération du jeu de résultat
+	    mysql_free_result(result);
+	    return 0;
+
+
+	//return myDBs->realTime[DataType][room];
+
+
 }
 
 float DB::getConf(int DataType, int room){
@@ -83,10 +128,50 @@ int DB::getMode(int DataType, int room){
 	return myDBs->mode[DataType][room];
 }
 
-string DB::getUnit(int DataType){
+string DB::getUnit(int DataType)
+{
 	//TODO
 
-	return 	*myDBs->unit[DataType];
+	   //Requête qui sélectionne tout dans ma table
+		char query[512];
+		sprintf(query,"SELECT * FROM datas WHERE dttn = %d;",DataType);
+		//if(DEBUG){cout << query << endl;}
+
+	    mysql_query(&mysql,query);
+
+	    //Déclaration des objets
+
+
+	    unsigned int i = 0;
+	    unsigned int num_champs = 0;
+
+	    //On met le jeu de résultat dans le pointeur result
+	    result = mysql_use_result(&mysql);
+	    if(result)
+	    {
+	    	//On récupère le nombre de champs
+	    	num_champs = mysql_num_fields(result);
+
+			row = mysql_fetch_row(result);
+
+		    //Libération du jeu de résultat
+		    mysql_free_result(result);
+			return row[2];
+	    }
+	    else
+	    {
+	    	printf("Table not found\n");
+	    	mysql_free_result(result);
+	    	return "-1";
+	    }
+
+	    //Libération du jeu de résultat
+	    mysql_free_result(result);
+	    return "0";
+
+
+
+	//return 	*myDBs->unit[DataType];
 }
 
 
@@ -95,20 +180,115 @@ string DB::getUnit(int DataType){
 
 int DB::Connect()
 {
-    MYSQL mysql;
+    //Initialisation de MySQL
     mysql_init(&mysql);
-    mysql_options(&mysql,MYSQL_READ_DEFAULT_GROUP,"option");
+    //Options de connexion
+    mysql_options(&mysql,MYSQL_READ_DEFAULT_GROUP,"MYSQL_READ_DEFAULT_GROUP");
 
+    //Si la connexion réussie...
     if(mysql_real_connect(&mysql,"localhost","domotic","domotic","domotic",0,NULL,0))
     {
-    	printf("DB : Connected !");
-        mysql_close(&mysql);
+    	printf("DB : Connected !\n");
     }
-    else
+    else  //Sinon ...
     {
-        printf("Une erreur s'est produite lors de la connexion à la BDD!");
+        printf("DB : Error !\n");
+        return 2;
     }
 
     return 0;
 }
 
+
+int DB::Close()
+{
+        //Fermeture de MySQL
+        mysql_close(&mysql);
+        printf("DB : Closed !\n");
+
+        return 0;
+}
+
+
+int DB::TableClear(string table)
+{
+	char query[512];
+	sprintf(query,"TRUNCATE TABLE %s", table.c_str());
+	if(DEBUG){cout << query << endl;}
+    return mysql_query(&mysql,query);
+}
+
+int DB::TableToConsole(string table)
+{
+    //Requête qui sélectionne tout dans ma table
+	char query[512];
+	sprintf(query,"SELECT * FROM %s", table.c_str());
+	if(DEBUG){cout << query << endl;}
+    mysql_query(&mysql,query);
+
+    //Déclaration des objets
+
+
+    unsigned int i = 0;
+    unsigned int num_champs = 0;
+
+    //On met le jeu de résultat dans le pointeur result
+    result = mysql_use_result(&mysql);
+    if(result)
+    {
+    //On récupère le nombre de champs
+    num_champs = mysql_num_fields(result);
+
+		//Tant qu'il y a encore un résultat ...
+		while ((row = mysql_fetch_row(result)))
+		{
+			//On déclare un pointeur long non signé pour y stocker la taille des valeurs
+			unsigned long *lengths;
+
+			//On stocke ces tailles dans le pointeur
+			lengths = mysql_fetch_lengths(result);
+
+			//On fait une boucle pour avoir la valeur de chaque champs
+			for(i = 0; i < num_champs; i++)
+			{
+			   //On ecrit toutes les valeurs
+			   printf("[%.*s] ", (int) lengths[i], row[i] ? row[i] : "NULL");
+			}
+
+			printf("\n");
+		}
+    }
+    else
+    {
+    	printf("Table not found\n");
+    }
+    //Libération du jeu de résultat
+    mysql_free_result(result);
+
+
+        return 0;
+
+}
+
+int DB::setDatasTable()
+{
+
+	this->TableClear("datas");
+
+	char query[512];
+
+	sprintf(query,"INSERT INTO datas VALUES ('%d', '%s', '%s', '%s', '%d', '%d');",val_temperature,"USELESS","°C","Température",-50,100);
+	if(DEBUG){cout << query << endl;}
+	mysql_query(&mysql,query);
+
+	sprintf(query,"INSERT INTO datas VALUES ('%d', '%s', '%s', '%s', '%d', '%d');",val_humidity,"USELESS","%","Humidité",0,100);
+	if(DEBUG){cout << query << endl;}
+	mysql_query(&mysql,query);
+
+	sprintf(query,"INSERT INTO datas VALUES ('%d', '%s', '%s', '%s', '%d', '%d');",val_pressure,"USELESS","mBar","Pression",800,1200);
+	if(DEBUG){cout << query << endl;}
+	mysql_query(&mysql,query);
+
+    return 0;
+
+}

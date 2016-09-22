@@ -46,9 +46,10 @@ int AI::init() {
 	this->myDB.setConf(conf_humidityHigh,60.0,room_salon);
 	this->myDB.setConf(conf_humidityLow,45.0,room_salon);
 
+
+	this->myDB.setMode(val_temperature,mode_auto,room_salon);
 	this->myDB.setMode(val_humidity,mode_auto,room_salon);
 	this->myDB.setMode(val_pressure,mode_auto,room_salon);
-	this->myDB.setMode(val_temperature,mode_auto,room_salon);
 
 	htu_toConsole();
 	bmp_toConsole();
@@ -85,13 +86,14 @@ int AI::refreshAllValues(){
 int AI::refreshAllRealTimeValues(){
 
 
-	float hum = htu_getHumidity();
+
 	float tmp =	(htu_getTemperature()+bmp_getTemperature())/2+calibration_linear_temperature;
+	float hum = htu_getHumidity();
 	float pre = bmp_getPressure();
 
 
-	this->myDB.set(val_humidity,hum,room_salon);
 	this->myDB.set(val_temperature,tmp,room_salon);
+	this->myDB.set(val_humidity,hum,room_salon);
 	this->myDB.set(val_pressure,pre,room_salon);
 
 	return 0;
@@ -107,7 +109,7 @@ int AI::humidityCheck(int room) {
 	if(myDB.getMode(val_humidity,room)==mode_auto)
 	{
 
-		if(DEBUG){cout << "Hum  AUTO : " << hum; }
+		if(DEBUG){cout << "Hum  AUTO : " << hum << endl; }
 		if(this->myDB.getConf(conf_humidityHigh,room)<this->myDB.get(val_humidity,room))
 		{
 			ChaconPlug(plug_dehumidifier_gr,plug_dehumidifier_nb,1);

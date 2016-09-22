@@ -9,8 +9,13 @@
 
 //volatile int counter = 0;
 
-pthread_mutex_t myMutexTest;
-volatile DBs *myDBsTest;
+//pthread_mutex_t myMutexTest;
+//volatile DBs *myDBsTest;
+
+//dataStruct DS;
+	pthread_mutex_t* myMutexTest = ( pthread_mutex_t*) malloc(sizeof( pthread_mutex_t));
+	volatile struct DBs* myDBsTest = (volatile struct DBs*) malloc(sizeof(volatile struct DBs));
+
 
 
 void *AIfuncTest(void *id)
@@ -46,14 +51,16 @@ int multithreadTest()
 
 		int id1 = 1, id2 = 2;
         pthread_t aiThread, userThread;
-        pthread_mutex_init(&myMutexTest,0);
+        pthread_mutex_init(myMutexTest,0);
         pthread_create(&aiThread, 0, AIfuncTest, (void*)id1);
         pthread_create(&userThread, 0, USERfuncTest, (void*)id2);
+
         pthread_join(aiThread, 0);
         pthread_join(userThread, 0);
-        pthread_mutex_destroy(&myMutexTest);
-        return 0;
 
+        pthread_mutex_destroy(myMutexTest);
+        return 0;
+}
     	/*
             int one = 1, two = 2, three = 3;
             pthread_t thread1, thread2, thread3;
@@ -66,10 +73,10 @@ int multithreadTest()
             pthread_join(thread3, 0);
             pthread_mutex_destroy(&myMutex);
             return 0;
-          */
+
 
 }
-
+*/
 
 /*
 void *mutex_testing(void *param)
@@ -90,14 +97,69 @@ Test::Test() {
 	// TODO Auto-generated constructor stub
 
 
+	Test::ToolsTest();
+	Test::DBTest();
+
+
 }
 
 Test::~Test() {
 	// TODO Auto-generated destructor stub
 }
 
+int Test::ToolsTest()
+{
+
+	cout << "Il est " << timeToString() << " et nous sommes le " << dateToString() << endl;
 
 
+
+return 0;
+}
+
+int Test::DBTest()
+{
+
+
+	cout << "Test begin" << endl;
+
+	//User::setDB(myDBsTest);
+	DB myDB = DB();
+
+	if(!myDB.Connect())
+	{
+
+		myDB.setDatasTable();
+
+		myDB.TableToConsole("datas");
+
+		myDB.set(val_humidity,63.56,room_salon);
+		myDB.set(val_humidity,70.52,room_sdb);
+/*
+		cout << "temp unit : "  << myDB.getUnit(val_temperature) << endl;
+		cout << "pres unit  : " << myDB.getUnit(val_pressure) << endl;
+		cout << "hum unit : " << myDB.getUnit(val_humidity) << endl;
+*/
+		cout << "Current salon temp : " << myDB.get(val_temperature,room_salon) << " " << myDB.getUnit(val_temperature) << endl;
+		cout << "Current salon pres : " << myDB.get(val_pressure,room_salon) << " " << myDB.getUnit(val_pressure) << endl;
+		cout << "Current salon hum : " << myDB.get(val_humidity,room_salon) << " " <<myDB.getUnit(val_humidity) << endl;
+
+
+		myDB.TableToConsole("measures");
+
+		//myDB.TableClear("measures");
+		myDB.Close();
+	}
+	else
+	{
+
+		cout << "DB not connected" << endl;
+	}
+
+
+
+	return 0;
+}
 
 
 

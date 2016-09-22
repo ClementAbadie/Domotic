@@ -16,6 +16,8 @@
 #include "AI/AI.h"
 #include "user/pushbullet.hpp"
 #include "user/ServerSocket.h"
+#include "tools/Tools.h"
+#include "conf/conf.h"
 
 using namespace std;
 
@@ -31,6 +33,8 @@ public:
 	Test();
 	virtual ~Test();
 
+	int ToolsTest();
+	int DBTest();
 
 };
 

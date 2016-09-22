@@ -10,6 +10,7 @@ RM := rm -rf
 -include sources.mk
 -include src/user/TCP/subdir.mk
 -include src/user/subdir.mk
+-include src/tools/subdir.mk
 -include src/sensors/htu21/subdir.mk
 -include src/sensors/bmp180/subdir.mk
 -include src/sensors/subdir.mk

@@ -21,6 +21,9 @@
 using namespace std;
 
 class User {
+
+	friend class Test;
+
 public:
 	User(volatile DBs  *myDBs);
 	User(){};
