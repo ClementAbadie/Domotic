@@ -129,12 +129,14 @@ int Test::DBTest()
 	if(!myDB.Connect())
 	{
 
-		myDB.setDatasTable();
+		myDB.setMeasuresTypesTable();
 
-		myDB.TableToConsole("datas");
+		myDB.TableToConsole("measuresTypes");
 
 		myDB.set(val_humidity,63.56,room_salon);
 		myDB.set(val_humidity,70.52,room_sdb);
+		myDB.set(val_pressure,1100.52,room_salon);
+
 /*
 		cout << "temp unit : "  << myDB.getUnit(val_temperature) << endl;
 		cout << "pres unit  : " << myDB.getUnit(val_pressure) << endl;

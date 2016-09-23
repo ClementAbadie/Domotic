@@ -112,7 +112,7 @@ public:
 	int set(int DataType, float value, int room);
 	int setConf(int DataType, float value, int room);
 	int setMode(int DataType, int mode, int room);
-	int setUnit(int value, string unit);
+	int setUnit(int DataType, string unit, string label, int min, int max);
 
 	float get(int DataType, int room);
 	float getConf(int DataType, int room);
@@ -136,7 +136,7 @@ private:
 	int Close();
 	int TableToConsole(string table);
 	int TableClear(string table);
-	int setDatasTable();
+	int setMeasuresTypesTable();
 };
 
 #endif /* AI_DB_H_ */

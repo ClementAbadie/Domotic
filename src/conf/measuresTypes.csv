@@ -1,0 +1,5 @@
+1;°C;Température;-50;100
+2;%;Humidité;0;100
+3;mBar;Pression;800;1200
+4;lux;Lumière;0;1000000
+5;lux;Lumière UV;0;1000000

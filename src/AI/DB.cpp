@@ -33,10 +33,7 @@ DB::~DB() {
 
 int DB::set(int DataType, float value, int room){
 
-	//TODO
-	//set time
-
-	if(!TEST){myDBs->realTime[DataType][room] = floor(value * 10 + 0.1) / 10;}
+	//if(!TEST){myDBs->realTime[DataType][room] = floor(value * 10 + 0.1) / 10;}
 
 	char query[512];
 	sprintf(query,"INSERT INTO measures VALUES ('%d', '%d', '%.1f', '%s');",DataType,room,value,dateAndTimeToString().c_str());
@@ -62,11 +59,16 @@ int DB::setMode(int DataType, int mode, int room){
 
 
 
-int DB::setUnit(int DataType, string unit){
-	//TODO
+int DB::setUnit(int DataType, string unit, string label, int min, int max)
+{
 
-	myDBs->unit[DataType] = &unit;
-	return 0;
+	char query[512];
+
+	sprintf(query,"INSERT INTO measuresTypes VALUES ('%d', '%s', '%s', '%s', '%d', '%d');",DataType,"USELESS",unit.c_str(),label.c_str(),min,max);
+	if(DEBUG){cout << query << endl;}
+	return mysql_query(&mysql,query);
+
+	//myDBs->unit[DataType] = &unit;
 }
 
 float DB::get(int DataType, int room){
@@ -74,7 +76,7 @@ float DB::get(int DataType, int room){
 
 	   //Requête qui sélectionne tout dans ma table
 		char query[512];
-		sprintf(query,"SELECT * FROM measures WHERE dttn = %d AND roon = %d ORDER BY dat DESC LIMIT 1;",DataType,room);
+		sprintf(query,"SELECT * FROM measures WHERE mest = %d AND rooi = %d ORDER BY dat DESC LIMIT 1;",DataType,room);
 		if(DEBUG){cout << query << endl;}
 	    mysql_query(&mysql,query);
 
@@ -130,11 +132,10 @@ int DB::getMode(int DataType, int room){
 
 string DB::getUnit(int DataType)
 {
-	//TODO
 
 	   //Requête qui sélectionne tout dans ma table
 		char query[512];
-		sprintf(query,"SELECT * FROM datas WHERE dttn = %d;",DataType);
+		sprintf(query,"SELECT * FROM measuresTypes WHERE mest = %d;",DataType);
 		//if(DEBUG){cout << query << endl;}
 
 	    mysql_query(&mysql,query);
@@ -270,24 +271,14 @@ int DB::TableToConsole(string table)
 
 }
 
-int DB::setDatasTable()
+int DB::setMeasuresTypesTable()
 {
 
-	this->TableClear("datas");
+	this->TableClear("measuresTypes");
 
-	char query[512];
-
-	sprintf(query,"INSERT INTO datas VALUES ('%d', '%s', '%s', '%s', '%d', '%d');",val_temperature,"USELESS","°C","Température",-50,100);
-	if(DEBUG){cout << query << endl;}
-	mysql_query(&mysql,query);
-
-	sprintf(query,"INSERT INTO datas VALUES ('%d', '%s', '%s', '%s', '%d', '%d');",val_humidity,"USELESS","%","Humidité",0,100);
-	if(DEBUG){cout << query << endl;}
-	mysql_query(&mysql,query);
-
-	sprintf(query,"INSERT INTO datas VALUES ('%d', '%s', '%s', '%s', '%d', '%d');",val_pressure,"USELESS","mBar","Pression",800,1200);
-	if(DEBUG){cout << query << endl;}
-	mysql_query(&mysql,query);
+	this->setUnit(val_temperature,"°C","Température",-50,100);
+	this->setUnit(val_humidity,"%","Humidité",0,100);
+	this->setUnit(val_pressure,"mBar","Pression",800,1200);
 
     return 0;
 

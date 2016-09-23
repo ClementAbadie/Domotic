@@ -10,7 +10,7 @@
 
 
 #define DEBUG 1
-#define TEST 0
+#define TEST 1
 
 
 

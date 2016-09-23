@@ -26,6 +26,7 @@ SUBDIRS := \
 src/AI \
 src \
 src/actuators/RCSwitch \
+src/conf \
 src/sensors/bmp180 \
 src/sensors/htu21 \
 src/sensors \
