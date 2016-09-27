@@ -79,16 +79,24 @@ void* SocketHandler(void* lp){
     int buffer_len = 1024;
     int bytecount;
 
-
-
-
     const char* snd;
-    snd = User::atConnect1().c_str();
-    send(*csock, snd, strlen( snd ), 0);
-    snd = User::atConnect2().c_str();
-    send(*csock, snd, strlen( snd ), 0);
-    snd = User::atConnect3().c_str();
-    send(*csock, snd, strlen( snd ), 0);
+
+    if(OLD){
+
+        snd = User::atConnect1().c_str();
+        send(*csock, snd, strlen( snd ), 0);
+        snd = User::atConnect2().c_str();
+        send(*csock, snd, strlen( snd ), 0);
+        snd = User::atConnect3().c_str();
+        send(*csock, snd, strlen( snd ), 0);
+    }
+    else
+    {
+
+        snd = User::atConnect().c_str();
+        send(*csock, snd, strlen( snd ), 0);
+    }
+
 
     while(true)
     {
