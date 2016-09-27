@@ -22,7 +22,7 @@ void Pushbullet::print()
 void Pushbullet::push(char *data)
 {
     CURL *api;
-    CURLcode response;
+    //CURLcode response;
     api = curl_easy_init();
 
     curl_slist *headers = NULL;
@@ -36,7 +36,7 @@ void Pushbullet::push(char *data)
     curl_easy_setopt(api, CURLOPT_POSTFIELDS, data);
     curl_easy_setopt(api, CURLOPT_HTTPHEADER, headers);
 
-    response = curl_easy_perform(api);
+    //response = curl_easy_perform(api);
     curl_easy_cleanup(api);
     curl_slist_free_all(headers);
     delete url;

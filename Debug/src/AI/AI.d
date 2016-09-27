@@ -1,6 +1,5 @@
 src/AI/AI.o: ../src/AI/AI.cpp ../src/AI/AI.h ../src/AI/../Domotic.h \
  ../src/AI/../AI/DB.h ../src/AI/../AI/DBvar.h ../src/AI/../AI/DBstruct.h \
- D:\Dev\CPP\libraries\SQLAPI\include/SQLAPI.h \
  ../src/AI/../AI/../conf/conf.h ../src/AI/../AI/../tools/Tools.h \
  D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/mysql.h \
  D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/mysql_version.h \
@@ -60,8 +59,6 @@ src/AI/AI.o: ../src/AI/AI.cpp ../src/AI/AI.h ../src/AI/../Domotic.h \
 ../src/AI/../AI/DBvar.h:
 
 ../src/AI/../AI/DBstruct.h:
-
-D:\Dev\CPP\libraries\SQLAPI\include/SQLAPI.h:
 
 ../src/AI/../AI/../conf/conf.h:
 

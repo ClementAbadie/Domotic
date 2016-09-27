@@ -10,17 +10,17 @@
 
 
 #define DEBUG 1
-#define TEST 1
+#define TEST 0
+#define OLD 1
 
 
+#if DEBUG == 0
+	#define TCP_PORT 56250
+#else
+	#define TCP_PORT 56251
+#endif
 
-#define TCP_PORT 56251
-
-
-
-
-
-
+#define CONF_PATH "/home/mopidy/prog/remote/domotic/conf/"
 
 
 

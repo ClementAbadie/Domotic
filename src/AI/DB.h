@@ -18,10 +18,9 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-#include <SQLAPI.h>
+#include <cstring>
 #include "../conf/conf.h"
 #include "../tools/Tools.h"
-
 
 
 #include <MYSQL/mysql.h>
@@ -118,7 +117,7 @@ public:
 	float getConf(int DataType, int room);
 	int getMode(int DataType, int room);
 	string getUnit(int DataType);
-
+	string getLabel(string table, string label);
 
 private:
 		//val  room
@@ -130,13 +129,21 @@ private:
     MYSQL mysql;
 
     MYSQL_RES *result = NULL;
-    MYSQL_ROW row = 0;
+    MYSQL_ROW row;
 
 	int Connect();
 	int Close();
 	int TableToConsole(string table);
 	int TableClear(string table);
 	int setMeasuresTypesTable();
+	int setActuatorsTypesTable();
+	int loadCSVtoTable(string table);
+	int query(string query);
+	string getRowString(int rowNb);
+	float getRowFloat(int rowNb);
+	int loadConfToTables();
+
+	int getRowNumberByName(string rowName);
 };
 
 #endif /* AI_DB_H_ */

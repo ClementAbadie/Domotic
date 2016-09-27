@@ -1,8 +1,7 @@
 src/user/User.o: ../src/user/User.cpp ../src/user/User.h \
  ../src/user/../AI/DB.h ../src/user/../AI/DBvar.h \
- ../src/user/../AI/DBstruct.h \
- D:\Dev\CPP\libraries\SQLAPI\include/SQLAPI.h \
- ../src/user/../AI/../conf/conf.h ../src/user/../AI/../tools/Tools.h \
+ ../src/user/../AI/DBstruct.h ../src/user/../AI/../conf/conf.h \
+ ../src/user/../AI/../tools/Tools.h \
  D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/mysql.h \
  D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/mysql_version.h \
  D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/mysql_com.h \
@@ -20,8 +19,6 @@ src/user/User.o: ../src/user/User.cpp ../src/user/User.h \
 ../src/user/../AI/DBvar.h:
 
 ../src/user/../AI/DBstruct.h:
-
-D:\Dev\CPP\libraries\SQLAPI\include/SQLAPI.h:
 
 ../src/user/../AI/../conf/conf.h:
 

@@ -7,7 +7,6 @@ int TidyServer(int host_port){
 
     int hsock;
     int * p_int ;
-    int err;
 
     socklen_t addr_size = 0;
     int* csock;

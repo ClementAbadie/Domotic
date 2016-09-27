@@ -1,6 +1,5 @@
 src/Test.o: ../src/Test.cpp ../src/Test.h ../src/AI/DB.h \
- ../src/AI/DBvar.h ../src/AI/DBstruct.h \
- D:\Dev\CPP\libraries\SQLAPI\include/SQLAPI.h ../src/AI/../conf/conf.h \
+ ../src/AI/DBvar.h ../src/AI/DBstruct.h ../src/AI/../conf/conf.h \
  ../src/AI/../tools/Tools.h \
  D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/mysql.h \
  D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/mysql_version.h \
@@ -60,8 +59,6 @@ src/Test.o: ../src/Test.cpp ../src/Test.h ../src/AI/DB.h \
 ../src/AI/DBvar.h:
 
 ../src/AI/DBstruct.h:
-
-D:\Dev\CPP\libraries\SQLAPI\include/SQLAPI.h:
 
 ../src/AI/../conf/conf.h:
 

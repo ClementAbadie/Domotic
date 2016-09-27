@@ -11,7 +11,7 @@
 
 #include <iostream>
 #include <ctime>
-#include <string>;
+#include <string>
 
 using namespace std;
 

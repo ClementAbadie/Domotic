@@ -32,7 +32,7 @@ class Test {
 public:
 	Test();
 	virtual ~Test();
-
+	void *AIfuncTest(void *id);
 	int ToolsTest();
 	int DBTest();
 

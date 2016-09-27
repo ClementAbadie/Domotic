@@ -2,9 +2,8 @@ src/user/ServerSocket.o: ../src/user/ServerSocket.cpp \
  ../src/user/ServerSocket.h ../src/user/Socket.h \
  ../src/user/SocketException.h ../src/user/../Domotic.h \
  ../src/user/../AI/DB.h ../src/user/../AI/DBvar.h \
- ../src/user/../AI/DBstruct.h \
- D:\Dev\CPP\libraries\SQLAPI\include/SQLAPI.h \
- ../src/user/../AI/../conf/conf.h ../src/user/../AI/../tools/Tools.h \
+ ../src/user/../AI/DBstruct.h ../src/user/../AI/../conf/conf.h \
+ ../src/user/../AI/../tools/Tools.h \
  D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/mysql.h \
  D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/mysql_version.h \
  D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/mysql_com.h \
@@ -68,8 +67,6 @@ src/user/ServerSocket.o: ../src/user/ServerSocket.cpp \
 ../src/user/../AI/DBvar.h:
 
 ../src/user/../AI/DBstruct.h:
-
-D:\Dev\CPP\libraries\SQLAPI\include/SQLAPI.h:
 
 ../src/user/../AI/../conf/conf.h:
 

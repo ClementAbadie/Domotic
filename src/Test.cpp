@@ -23,7 +23,7 @@ void *AIfuncTest(void *id)
 	//DB myDB = DB(*myDBsTest);
 	//AI myAI = AI(myDB);
 	//myAI.start(myMutexTest);
-
+	return 0;
 }
 
 void *USERfuncTest(void *id)
@@ -129,12 +129,20 @@ int Test::DBTest()
 	if(!myDB.Connect())
 	{
 
+		int err = myDB.loadConfToTables();
+
+		if(err){cerr << err << " error(s)" << endl;}
+
 		myDB.setMeasuresTypesTable();
+
+		//TODO
+		//myDB.getLabel("measuresTypes",val_temperature);
 
 		myDB.TableToConsole("measuresTypes");
 
+
+		myDB.set(val_temperature,20.52,room_sdb);
 		myDB.set(val_humidity,63.56,room_salon);
-		myDB.set(val_humidity,70.52,room_sdb);
 		myDB.set(val_pressure,1100.52,room_salon);
 
 /*
@@ -147,14 +155,15 @@ int Test::DBTest()
 		cout << "Current salon hum : " << myDB.get(val_humidity,room_salon) << " " <<myDB.getUnit(val_humidity) << endl;
 
 
-		myDB.TableToConsole("measures");
 
+
+		myDB.TableToConsole("measures");
+		myDB.TableToConsole("actuatorsTypes");
 		//myDB.TableClear("measures");
 		myDB.Close();
 	}
 	else
 	{
-
 		cout << "DB not connected" << endl;
 	}
 
