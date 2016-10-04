@@ -23,6 +23,9 @@ using namespace std;
 
 
 class AI {
+
+	friend class Test;
+
 public:
 	AI(volatile DBs  *myDBs);
 	virtual ~AI();

@@ -1,9 +1,10 @@
 
 
+#include "conf/conf.h"
 
 #include "AI/DB.h"
 #include "AI/AI.h"
-#include "conf/conf.h"
+
 #include "user/pushbullet.hpp"
 #include "Test.h"
 #include "user/ServerSocket.h"

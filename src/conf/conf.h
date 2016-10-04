@@ -9,9 +9,9 @@
 #define CONF_H_
 
 
-#define DEBUG 1
+#define DEBUG 0
 #define TEST 0
-#define OLD 0
+#define OLD 1
 
 
 #if DEBUG == 0

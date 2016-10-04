@@ -7,7 +7,7 @@
 
 #ifndef SERVERTCP_H_
 #define SERVERTCP_H_
-#define DEBUG 1
+
 
 #include "ServerSocket.h"
 #include "SocketException.h"

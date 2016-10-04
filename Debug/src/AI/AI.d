@@ -1,6 +1,7 @@
 src/AI/AI.o: ../src/AI/AI.cpp ../src/AI/AI.h ../src/AI/../Domotic.h \
- ../src/AI/../AI/DB.h ../src/AI/../AI/DBvar.h ../src/AI/../AI/DBstruct.h \
- ../src/AI/../AI/../conf/conf.h ../src/AI/../AI/../tools/Tools.h \
+ ../src/AI/../conf/conf.h ../src/AI/../AI/DB.h ../src/AI/../AI/DBvar.h \
+ ../src/AI/../AI/DBstruct.h ../src/AI/../AI/../conf/conf.h \
+ ../src/AI/../AI/../tools/Tools.h \
  D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/mysql.h \
  D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/mysql_version.h \
  D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/mysql_com.h \
@@ -8,30 +9,29 @@ src/AI/AI.o: ../src/AI/AI.cpp ../src/AI/AI.h ../src/AI/../Domotic.h \
  D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/my_list.h \
  D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/typelib.h \
  D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/my_alloc.h \
- ../src/AI/../AI/AI.h ../src/AI/../conf/conf.h \
- ../src/AI/../user/pushbullet.hpp ../src/AI/../Test.h \
- ../src/AI/../user/ServerSocket.h ../src/AI/../user/Socket.h \
- ../src/AI/../user/ServerSocket.h ../src/AI/../user/SocketException.h \
- ../src/AI/../user/../Domotic.h ../src/AI/../user/../AI/DB.h \
- ../src/AI/../user/../AI/AI.h ../src/AI/../user/../conf/conf.h \
- ../src/AI/../user/../user/pushbullet.hpp ../src/AI/../user/../Test.h \
- ../src/AI/../user/../user/ServerSocket.h \
+ ../src/AI/../AI/AI.h ../src/AI/../user/pushbullet.hpp \
+ ../src/AI/../Test.h ../src/AI/../user/ServerSocket.h \
+ ../src/AI/../user/Socket.h ../src/AI/../user/ServerSocket.h \
+ ../src/AI/../user/SocketException.h ../src/AI/../user/../Domotic.h \
+ ../src/AI/../user/../conf/conf.h ../src/AI/../user/../AI/DB.h \
+ ../src/AI/../user/../AI/AI.h ../src/AI/../user/../user/pushbullet.hpp \
+ ../src/AI/../user/../Test.h ../src/AI/../user/../user/ServerSocket.h \
  ../src/AI/../user/../user/ServerTCP.h \
  ../src/AI/../user/../user/ServerSocket.h \
  ../src/AI/../user/../user/SocketException.h \
  ../src/AI/../user/../user/../Domotic.h \
+ ../src/AI/../user/../user/../conf/conf.h \
  ../src/AI/../user/../user/../AI/DB.h \
  ../src/AI/../user/../user/../AI/AI.h \
- ../src/AI/../user/../user/../conf/conf.h \
  ../src/AI/../user/../user/../user/pushbullet.hpp \
  ../src/AI/../user/../user/../Test.h \
  ../src/AI/../user/../user/../user/ServerSocket.h \
  ../src/AI/../user/../user/../user/ServerTCP.h \
  ../src/AI/../user/../user/../user/TCP/TidyServer.h \
  ../src/AI/../user/../user/../user/TCP/../../Domotic.h \
+ ../src/AI/../user/../user/../user/TCP/../../conf/conf.h \
  ../src/AI/../user/../user/../user/TCP/../../AI/DB.h \
  ../src/AI/../user/../user/../user/TCP/../../AI/AI.h \
- ../src/AI/../user/../user/../user/TCP/../../conf/conf.h \
  ../src/AI/../user/../user/../user/TCP/../../user/pushbullet.hpp \
  ../src/AI/../user/../user/../user/TCP/../../Test.h \
  ../src/AI/../user/../user/../user/TCP/../../user/ServerSocket.h \
@@ -53,6 +53,8 @@ src/AI/AI.o: ../src/AI/AI.cpp ../src/AI/AI.h ../src/AI/../Domotic.h \
 ../src/AI/AI.h:
 
 ../src/AI/../Domotic.h:
+
+../src/AI/../conf/conf.h:
 
 ../src/AI/../AI/DB.h:
 
@@ -80,8 +82,6 @@ D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/my_alloc.h:
 
 ../src/AI/../AI/AI.h:
 
-../src/AI/../conf/conf.h:
-
 ../src/AI/../user/pushbullet.hpp:
 
 ../src/AI/../Test.h:
@@ -96,11 +96,11 @@ D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/my_alloc.h:
 
 ../src/AI/../user/../Domotic.h:
 
+../src/AI/../user/../conf/conf.h:
+
 ../src/AI/../user/../AI/DB.h:
 
 ../src/AI/../user/../AI/AI.h:
-
-../src/AI/../user/../conf/conf.h:
 
 ../src/AI/../user/../user/pushbullet.hpp:
 
@@ -116,11 +116,11 @@ D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/my_alloc.h:
 
 ../src/AI/../user/../user/../Domotic.h:
 
+../src/AI/../user/../user/../conf/conf.h:
+
 ../src/AI/../user/../user/../AI/DB.h:
 
 ../src/AI/../user/../user/../AI/AI.h:
-
-../src/AI/../user/../user/../conf/conf.h:
 
 ../src/AI/../user/../user/../user/pushbullet.hpp:
 
@@ -134,11 +134,11 @@ D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/my_alloc.h:
 
 ../src/AI/../user/../user/../user/TCP/../../Domotic.h:
 
+../src/AI/../user/../user/../user/TCP/../../conf/conf.h:
+
 ../src/AI/../user/../user/../user/TCP/../../AI/DB.h:
 
 ../src/AI/../user/../user/../user/TCP/../../AI/AI.h:
-
-../src/AI/../user/../user/../user/TCP/../../conf/conf.h:
 
 ../src/AI/../user/../user/../user/TCP/../../user/pushbullet.hpp:
 

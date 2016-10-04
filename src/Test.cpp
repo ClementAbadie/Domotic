@@ -119,12 +119,13 @@ return 0;
 
 int Test::DBTest()
 {
-
+	volatile struct DBs* myDBs = (volatile struct DBs*) malloc(sizeof(volatile struct DBs));
 
 	cout << "Test begin" << endl;
 
 	//User::setDB(myDBsTest);
 	DB myDB = DB();
+	AI myAI = AI(myDBs);
 
 	if(!myDB.Connect())
 	{
@@ -160,6 +161,26 @@ int Test::DBTest()
 		myDB.TableToConsole("measures");
 		myDB.TableToConsole("actuatorsTypes");
 		//myDB.TableClear("measures");
+
+
+		myAI.init();
+
+		myDB.set(val_humidity,60.00,room_salon);
+		myAI.humidityCheck(room_salon);
+		sleep(3);
+		myDB.set(val_humidity,50.00,room_salon);
+		myAI.humidityCheck(room_salon);
+		sleep(3);
+		myDB.set(val_humidity,40.00,room_salon);
+		myAI.humidityCheck(room_salon);
+		sleep(3);
+		myDB.set(val_humidity,50.00,room_salon);
+		myAI.humidityCheck(room_salon);
+
+
+		myDB.TableClear("measures");
+
+
 		myDB.Close();
 	}
 	else

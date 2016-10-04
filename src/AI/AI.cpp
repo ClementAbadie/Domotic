@@ -39,7 +39,7 @@ int AI::start(pthread_mutex_t *myMutex) {
 int AI::init() {
 
 
-	this->myDB.setConf(conf_humidityHigh,60.0,room_salon);
+	this->myDB.setConf(conf_humidityHigh,55.0,room_salon);
 	this->myDB.setConf(conf_humidityLow,45.0,room_salon);
 
 	this->myDB.setMode(val_temperature,mode_auto,room_salon);
