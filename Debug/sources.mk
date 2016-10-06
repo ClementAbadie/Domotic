@@ -25,11 +25,13 @@ CPP_DEPS :=
 SUBDIRS := \
 src/AI \
 src \
+src/actuators \
 src/actuators/RCSwitch \
 src/conf \
+src/home \
+src/sensors \
 src/sensors/bmp180 \
 src/sensors/htu21 \
-src/sensors \
 src/tools \
 src/user \
 src/user/TCP \

@@ -14,8 +14,10 @@ RM := rm -rf
 -include src/sensors/htu21/subdir.mk
 -include src/sensors/bmp180/subdir.mk
 -include src/sensors/subdir.mk
+-include src/home/subdir.mk
 -include src/conf/subdir.mk
 -include src/actuators/RCSwitch/subdir.mk
+-include src/actuators/subdir.mk
 -include src/AI/subdir.mk
 -include src/subdir.mk
 -include subdir.mk

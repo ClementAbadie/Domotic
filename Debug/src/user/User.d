@@ -10,7 +10,7 @@ src/user/User.o: ../src/user/User.cpp ../src/user/User.h \
  D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/typelib.h \
  D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/my_alloc.h \
  ../src/user/../AI/DBstruct.h ../src/user/../actuators.h \
- ../src/user/../actuators/RCSwitch/send.h
+ ../src/user/../actuators/RCSwitch/send.h ../src/user/../admin.h
 
 ../src/user/User.h:
 
@@ -43,3 +43,5 @@ D:\Dev\CPP\libraries\SQLAPI\include/MYSQL/my_alloc.h:
 ../src/user/../actuators.h:
 
 ../src/user/../actuators/RCSwitch/send.h:
+
+../src/user/../admin.h:

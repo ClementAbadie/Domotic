@@ -6,6 +6,7 @@
  */
 
 #include "User.h"
+#include "../admin.h"
 
 DB User::myDB = DB();
 
@@ -31,6 +32,7 @@ string User::execute(string order) {
 	//TODO
 	int nb = 0;
 	int state = 0;
+	int manage = 0;
 
 	if(sscanf(order.c_str(),"P: %i %i",&nb,&state))
 	{
@@ -45,7 +47,23 @@ string User::execute(string order) {
 		}
 		User::myDB.setMode(chaconToVal[nb][room_salon],state,room_salon);
 	}
+	else if(sscanf(order.c_str(),"M: %i",&manage))
+	{
 
+	      switch ( manage )
+	      {
+	         case 0:
+	            break;
+	         case 1:
+	            break;
+	         case 2:
+	            break;
+	         case 9:
+	        	 domotic_restart();
+	            break;
+	         //default:
+	      }
+	}
 
 	return order;
 

@@ -9,7 +9,7 @@
 #define CONF_H_
 
 
-#define DEBUG 0
+#define DEBUG 1
 #define TEST 0
 #define OLD 1
 
@@ -20,8 +20,9 @@
 	#define TCP_PORT 56251
 #endif
 
+//Paths
 #define CONF_PATH "/home/mopidy/prog/remote/domotic/conf/"
-
+#define MANAGE_SCRIPT_PATH "/home/mopidy/prog/bash/domotic.sh"
 
 
 
